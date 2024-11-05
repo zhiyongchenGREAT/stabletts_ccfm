@@ -1,11 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; URL='demo/index.html'" />
-    <title>Redirecting...</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>StableTTS</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css"> <!-- 引入自定义的CSS文件 -->
 </head>
+
 <body>
-    <p>If you are not redirected automatically, follow this <a href="demo/index.html">link to the demo</a>.</p>
+
+<div class="container">
+    <header role="banner"></header>
+    <main role="main">
+        <article itemscope itemtype="https://schema.org/BlogPosting">
+
+            <div class="rounded-section">
+                <h1>StableTTS</h1>
+                <p>StableTTS is a cutting-edge zero-shot voice conversion method, inspired by modern TTS models.</p>
+                <p>This page presents a comparison of results across various models.</p>
+                <p>This page is for showing results and comparisons only. The examples of other VC models are directly retrieved from their demo pages.</p>
+            </div>
+
+            <div class="rounded-section">
+                <h2 id="comparison-with-others">Zero-shot Voice Conversion</h2>
+                <p>We present our results of zero-shot voice conversion comparing to other previously released/published voice conversion models. Our model demonstrates comparable, if not superior, performance to previous models. The results are shown below.</p>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Source Audio</th>
+                                <th>Timbre Prompt</th>
+                                <th>Mulli VC</th>
+                                <th>Consistency VC</th>
+                                <th>DiffHier VC</th>
+                                <th>Free VC</th>
+                                <th>StableTTS (ours)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><audio controls style="width: 140px;"><source src="demos/sources/s5.wav"/>Your browser does not support the audio element.</audio></td>
+                                <td><audio controls style="width: 140px;"><source src="demos/references/s5p1.wav"/>Your browser does not support the audio element.</audio></td>
+                                <td><audio controls style="width: 140px;"><source src="demos/others/mulli_s5p1.wav"/>Your browser does not support the audio element.</audio></td>
+                                <td><audio controls style="width: 140px;"><source src="demos/others/consistency_s5p1.wav"/>Your browser does not support the audio element.</audio></td>
+                                <td><audio controls style="width: 140px;"><source src="demos/others/diff_s5p1.wav"/>Your browser does not support the audio element.</audio></td>
+                                <td><audio controls style="width: 140px;"><source src="demos/others/free_s5p1.wav"/>Your browser does not support the audio element.</audio></td>
+                                <td><audio controls style="width: 140px;"><source src="demos/converted/s5_s5p1.wav"/>Your browser does not support the audio element.</audio></td>
+                            </tr>
+                            <!-- Add additional rows here for other comparisons -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="rounded-section">
+                <h2 id="Celebrities and Anime Characters">Celebrities and Anime Characters</h2>
+                <p>StableTTS can mimic the voices of celebrities or characters from animated shows. We present these examples for purely research purposes.</p>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Source Audio</th>
+                                <th>Celeb</th>
+                                <th>Timbre Prompt</th>
+                                <th>StableTTS Converted</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="4"><audio controls style="width: 140px;"><source src="demos/sources/s9.wav"/>Your browser does not support the audio element.</audio></td>
+                                <td>Donald Trump</td>
+                                <td><audio controls style="width: 140px;"><source src="demos/references/trump_0.wav"/>Your browser does not support the audio element.</audio></td>
+                                <td><audio controls style="width: 140px;"><source src="demos/converted/s9_trump.wav"/>Your browser does not support the audio element.</audio></td>
+                            </tr>
+                            <tr>
+                                <td>Benedict Cumberbatch</td>
+                                <td><audio controls style="width: 140px;"><source src="demos/references/Ben_0.wav"/>Your browser does not support the audio element.</audio></td>
+                                <td><audio controls style="width: 140px;"><source src="demos/converted/s9_ben.wav"/>Your browser does not support the audio element.</audio></td>
+                            </tr>
+                            <tr>
+                                <td>周杰伦 (Jay Chou)</td>
+                                <td><audio controls style="width: 140px;"><source src="demos/references/jay_0.wav"/>Your browser does not support the audio element.</audio></td>
+                                <td><audio controls style="width: 140px;"><source src="demos/converted/s9_jay.wav"/>Your browser does not support the audio element.</audio></td>
+                            </tr>
+                            <tr>
+                                <td>丁真 (Zhen Ding)</td>
+                                <td><audio controls style="width: 140px;"><source src="demos/references/dingzhen_0.wav"/>Your browser does not support the audio element.</audio></td>
+                                <td><audio controls style="width: 140px;"><source src="demos/converted/s9_dingzhen.wav"/>Your browser does not support the audio element.</audio></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="rounded-section">
+                <h2 id="Talking Pace Control">Talking Pace Control</h2>
+                <p>StableTTS can easily control the talking pace of the converted audio.</p>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Source Audio</th>
+                                <th>Timbre Prompt</th>
+                                <th>Length</th>
+                                <th>StableTTS Converted</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="4"><audio controls style="width: 140px;"><source src="demos/sources/s9.wav"/>Your browser does not support the audio element.</audio></td>
+                                <td rowspan="4"><audio controls style="width: 140px;"><source src="demos/references/cafe_0.wav"/>Your browser does not support the audio element.</audio></td>
+                                <td>x0.5</td>
+                                <td><audio controls style="width: 140px;"><source src="demos/converted/s9_cafe_0.5.wav"/>Your browser does not support the audio element.</audio></td>
+                            </tr>
+                            <tr>
+                                <td>x1.0</td>
+                                <td><audio controls style="width: 140px;"><source src="demos/converted/s9_cafe_1.0.wav"/>Your browser does not support the audio element.</audio></td>
+                            </tr>
+                            <tr>
+                                <td>x1.5</td>
+                                <td><audio controls style="width: 140px;"><source src="demos/converted/s9_cafe_1.5.wav"/>Your browser does not support the audio element.</audio></td>
+                            </tr>
+                            <tr>
+                                <td>x2.0</td>
+                                <td><audio controls style="width: 140px;"><source src="demos/converted/s9_cafe_2.0.wav"/>Your browser does not support the audio element.</audio></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="rounded-section">
+                <h2 id="Singing Voice Conversion">Singing Voice Conversion</h2>
+                <p>StableTTS performs singing voice conversion as well. The results are shown below.</p>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Timbre Prompt</th>
+                                <th>Source Audio</th>
+                                <th>StableTTS Converted</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="3"><audio controls style="width: 140px;"><source src="demos/references/trump_0.wav"/>Your browser does not support the audio element.</audio></td>
+                                <td><audio controls style="width: 140px;"><source src="demos/sources/sing_fragment_0.wav"/>Your browser does not support the audio element.</audio></td>
+                                <td><audio controls style="width: 140px;"><source src="demos/converted/sing_fragment_0_trump.wav"/>Your browser does not support the audio element.</audio></td>
+                            </tr>
+                            <tr>
+                                <td><audio controls style="width: 140px;"><source src="demos/sources/singing.wav"/>Your browser does not support the audio element.</audio></td>
+                                <td><audio controls style="width: 140px;"><source src="demos/converted/singing_trump.wav"/>Your browser does not support the audio element.</audio></td>
+                            </tr>
+                            <tr>
+                                <td><audio controls style="width: 140px;"><source src="demos/sources/世界还小.wav"/>Your browser does not support the audio element.</audio></td>
+                                <td><audio controls style="width: 140px;"><source src="demos/converted/世界还小_trump.wav"/>Your browser does not support the audio element.</audio></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3"><audio controls style="width: 140px;"><source src="demos/references/teio_0.wav"/>Your browser does not support the audio element.</audio></td>
+                                <td><audio controls style="width: 140px;"><source src="demos/sources/sing_fragment_0.wav"/>Your browser does not support the audio element.</audio></td>
+                                <td><audio controls style="width: 140px;"><source src="demos/converted/sing_fragment_0_teio.wav"/>Your browser does not support the audio element.</audio></td>
+                            </tr>
+                            <tr>
+                                <td><audio controls style="width: 140px;"><source src="demos/sources/singing.wav"/>Your browser does not support the audio element.</audio></td>
+                                <td><audio controls style="width: 140px;"><source src="demos/converted/singing_teio.wav"/>Your browser does not support the audio element.</audio></td>
+                            </tr>
+                            <tr>
+                                <td><audio controls style="width: 140px;"><source src="demos/sources/世界还小.wav"/>Your browser does not support the audio element.</audio></td>
+                                <td><audio controls style="width: 140px;"><source src="demos/converted/世界还小_teio.wav"/>Your browser does not support the audio element.</audio></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="rounded-section">
+                <h2 id="comparison-with-seedtts">StableTTS Demo</h2>
+                <p>This part is left for you to utilize! Dr.Chen.<br>The results are shown below.</p>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Language</th>
+                                <th>Source Audio</th>
+                                <th>Timbre Prompt</th>
+                                <th>Seed-TTS</th>
+                                <th>StableTTS (ours)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="4">EN</td>
+                                <td rowspan="2"><audio controls style="width: 140px;"><source src="demos/sources/source_s1.wav"/>Your browser does not support the audio element.</audio></td>
+                                <td><audio controls style="width: 140px;"><source src="demos/references/s1p1.wav"/>Your browser does not support the audio element.</audio></td>
+                                <td><audio controls style="width: 140px;"><source src="demos/others/seedtts_s1_s1p1.wav"/>Your browser does not support the audio element.</audio></td>
+                                <td><audio controls style="width: 140px;"><source src="demos/converted/source_s1_s1p1.wav"/>Your browser does not support the audio element.</audio></td>
+                            </tr>
+                            <tr>
+                                <td><audio controls style="width: 140px;"><source src="demos/references/s1p2.wav"/>Your browser does not support the audio element.</audio></td>
+                                <td><audio controls style="width: 140px;"><source src="demos/others/seedtts_s1_s1p2.wav"/>Your browser does not support the audio element.</audio></td>
+                                <td><audio controls style="width: 140px;"><source src="demos/converted/source_s1_s1p2.wav"/>Your browser does not support the audio element.</audio></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2"><audio controls style="width: 140px;"><source src="demos/sources/source_s2.wav"/>Your browser does not support the audio element.</audio></td>
+                                <td><audio controls style="width: 140px;"><source src="demos/references/s2p1.wav"/>Your browser does not support the audio element.</audio></td>
+                                <td><audio controls style="width: 140px;"><source src="demos/others/seedtts_s2_s2p1.wav"/>Your browser does not support the audio element.</audio></td>
+                                <td><audio controls style="width: 140px;"><source src="demos/converted/source_s2_s2p1.wav"/>Your browser does not support the audio element.</audio></td>
+                            </tr>
+                            <tr>
+                                <td><audio controls style="width: 140px;"><source src="demos/references/s2p2.wav"/>Your browser does not support the audio element.</audio></td>
+                                <td><audio controls style="width: 140px;"><source src="demos/others/seedtts_s2_s2p2.wav"/>Your browser does not support the audio element.</audio></td>
+                                <td><audio controls style="width: 140px;"><source src="demos/converted/source_s2_s2p2.wav"/>Your browser does not support the audio element.</audio></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4">ZH</td>
+                                <td rowspan="2"><audio controls style="width: 140px;"><source src="demos/sources/source_s3.wav"/>Your browser does not support the audio element.</audio></td>
+                                <td><audio controls style="width: 140px;"><source src="demos/references/s3p1.wav"/>Your browser does not support the audio element.</audio></td>
+                                <td><audio controls style="width: 140px;"><source src="demos/others/seedtts_s3_s3p1.wav"/>Your browser does not support the audio element.</audio></td>
+                                <td><audio controls style="width: 140px;"><source src="demos/converted/source_s3_s3p1.wav"/>Your browser does not support the audio element.</audio></td>
+                            </tr>
+                            <tr>
+                                <td><audio controls style="width: 140px;"><source src="demos/references/s3p2.wav"/>Your browser does not support the audio element.</audio></td>
+                                <td><audio controls style="width: 140px;"><source src="demos/others/seedtts_s3_s3p2.wav"/>Your browser does not support the audio element.</audio></td>
+                                <td><audio controls style="width: 140px;"><source src="demos/converted/source_s3_s3p2.wav"/>Your browser does not support the audio element.</audio></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2"><audio controls style="width: 140px;"><source src="demos/sources/source_s4.wav"/>Your browser does not support the audio element.</audio></td>
+                                <td><audio controls style="width: 140px;"><source src="demos/references/s4p1.wav"/>Your browser does not support the audio element.</audio></td>
+                                <td><audio controls style="width: 140px;"><source src="demos/others/seedtts_s4_s4p1.wav"/>Your browser does not support the audio element.</audio></td>
+                                <td><audio controls style="width: 140px;"><source src="demos/converted/source_s4_s4p1.wav"/>Your browser does not support the audio element.</audio></td>
+                            </tr>
+                            <tr>
+                                <td><audio controls style="width: 140px;"><source src="demos/references/s4p2.wav"/>Your browser does not support the audio element.</audio></td>
+                                <td><audio controls style="width: 140px;"><source src="demos/others/seedtts_s4_s4p2.wav"/>Your browser does not support the audio element.</audio></td>
+                                <td><audio controls style="width: 140px;"><source src="demos/converted/source_s4_s4p2.wav"/>Your browser does not support the audio element.</audio></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </article>
+    </main>
+</div>
+
 </body>
+<footer class="footer">
+    <p>&copy; 2024 StableTTS. All rights reserved. | Developed by Dr. Zhiyong Chen, Shanghai University</p>
+    <p>Based on research contributions by Zhiyong Chen, Xinnuo Li, Shuhang Wu, Zhi Yang, Zhiqi Ai, and Shugong Xu.</p>
+    <p>For more information, visit our <a href="https://github.com/zhiyongchenGREAT/stabletts_ccfm" target="_blank">project page</a>.</p>
+</footer>
+
 </html>
