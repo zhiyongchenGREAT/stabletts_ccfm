@@ -1,0 +1,168 @@
+/* 设置全局样式 */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* 标题样式 */
+h1, h2 {
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 10px rgba(0, 255, 255, 0.8), 0px 0px 20px rgba(0, 255, 255, 0.5);
+}
+
+/* 段落样式 */
+p {
+    font-weight: 300;
+    line-height: 1.8;
+    color: #c5c6c7;
+    text-shadow: 0px 0px 5px rgba(0, 255, 255, 0.2);
+}
+
+/* 容器样式 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 表格样式 */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.3);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* 表头样式 */
+th {
+    background: linear-gradient(135deg, #3a3f51, #1b1e2e);
+    color: #00d1d1;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 12px;
+    text-shadow: 0px 0px 5px rgba(0, 255, 255, 0.7);
+}
+
+/* 表格行样式 */
+td {
+    border: 1px solid #30313a;
+    padding: 10px;
+    color: #b1b1b1;
+    text-align: center;
+    font-size: 13px;
+}
+
+tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+tr:hover {
+    background: rgba(0, 255, 255, 0.1);
+}
+
+/* 音频播放器样式 */
+audio {
+    border: 2px solid #00d1d1;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 255, 255, 0.5);
+    width: 140px;
+}
+
+/* 科技感的内容区域样式 */
+.rounded-section {
+    padding: 30px;
+    margin-top: 30px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+}
+
+/* 按钮样式（如果需要按钮） */
+button {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #00d1d1;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 4px 15px rgba(0, 255, 255, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 20px rgba(0, 255, 255, 0.6);
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1f1c2c;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00d1d1;
+    border-radius: 4px;
+}
+
+/* 科技感闪烁动画 */
+@keyframes glow {
+    0% {
+        box-shadow: 0px 0px 5px rgba(0, 255, 255, 0.5);
+    }
+    50% {
+        box-shadow: 0px 0px 20px rgba(0, 255, 255, 1);
+    }
+    100% {
+        box-shadow: 0px 0px 5px rgba(0, 255, 255, 0.5);
+    }
+}
+
+/* 为标题增加发光效果 */
+h1, h2 {
+    animation: glow 1.5s infinite alternate;
+}
+/* 页脚样式 */
+.footer {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    text-align: center;
+    color: #00d1d1;
+    font-size: 14px;
+    box-shadow: 0px -4px 10px rgba(0, 255, 255, 0.2);
+    border-top: 1px solid rgba(0, 255, 255, 0.2);
+    margin-top: 40px;
+}
+
+.footer p {
+    margin: 5px 0;
+    color: #b0f7f7;
+}
+
+.footer a {
+    color: #00ffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    color: #ff00ff;
+    text-shadow: 0px 0px 5px rgba(255, 0, 255, 0.8);
+}
