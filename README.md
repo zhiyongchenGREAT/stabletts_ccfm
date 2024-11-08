@@ -1,2 +1,6 @@
 # stabletts_ccfm
-repo for stableTTS consistency flow matching
+Repo for stableTTS consistency flow matching
+
+- [x] Demostration Page 
+- [ ] Code
+- [ ] Weights
