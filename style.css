@@ -1,5 +1,4 @@
-/*正式版*/
-/* 基础样式 */
+/* Basic Styles */
 * {
     margin: 0;
     padding: 0;
@@ -15,14 +14,14 @@ body {
     padding-top: 20px;
 }
 
-/* 容器样式 */
+/* Container Styles */
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* 标题样式 */
+/* Heading Styles */
 h1, h2 {
     font-weight: 700;
     color: #0056b3;
@@ -40,14 +39,14 @@ h2 {
     margin-top: 30px;
 }
 
-/* 段落样式 */
+/* Paragraph Styles */
 p {
     font-size: 1em;
     margin-bottom: 10px;
     color: #555;
 }
 
-/* 圆角容器 */
+/* Rounded Section Container */
 .rounded-section {
     background-color: #ffffff;
     border-radius: 8px;
@@ -56,17 +55,18 @@ p {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
-/* 表格样式 */
+/* Table Styles */
 .table-responsive {
     overflow-x: auto;
 }
 
 table {
-    width: 100%;
+    width: 100%; /* Make the table take the full width of the container */
     border-collapse: collapse;
     margin: 20px 0;
     font-size: 0.9em;
     color: #333;
+    table-layout: fixed; /* Ensures even distribution of columns */
 }
 
 th, td {
@@ -75,23 +75,45 @@ th, td {
     border: 1px solid #e0e0e0;
 }
 
+/* Header Cell Styles */
 th {
     background-color: #e9f1f7;
     color: #0056b3;
     font-weight: 400;
 }
 
+/* Row Background */
 tr:nth-child(even) {
     background-color: #f4f8fb;
 }
 
-/* 音频控制样式 */
+/* Audio Control Styles */
 audio {
-    width: 100%;
-    max-width: 140px;
+    width: 100%; /* Make audio control fill the table cell */
 }
 
-/* 页脚样式 */
+/* Dynamically adjust width based on column count */
+table[data-columns="6"] th, 
+table[data-columns="6"] td {
+    width: calc(100% / 6); /* For tables with 6 columns */
+}
+
+table[data-columns="5"] th, 
+table[data-columns="5"] td {
+    width: calc(100% / 5); /* For tables with 5 columns */
+}
+
+table[data-columns="4"] th, 
+table[data-columns="4"] td {
+    width: calc(100% / 4); /* For tables with 4 columns */
+}
+
+table[data-columns="3"] th, 
+table[data-columns="3"] td {
+    width: calc(100% / 3); /* For tables with 3 columns */
+}
+
+/* Footer Styles */
 .footer {
     text-align: center;
     font-size: 0.85em;
