@@ -108,10 +108,19 @@ table[data-columns="4"] td {
     width: calc(100% / 4); /* For tables with 4 columns */
 }
 
-table[data-columns="3"] th, 
-table[data-columns="3"] td {
-    width: calc(100% / 3); /* For tables with 3 columns */
+/* For tables with 3 columns, setting the first column narrow and the remaining two to split equally */
+table[data-columns="3"] th:first-child,
+table[data-columns="3"] td:first-child {
+    width: 10%; /* Set a narrow width for the first column */
 }
+
+table[data-columns="3"] th:nth-child(2),
+table[data-columns="3"] th:nth-child(3),
+table[data-columns="3"] td:nth-child(2),
+table[data-columns="3"] td:nth-child(3) {
+    width: 45%; /* Divide the remaining space equally between the second and third columns */
+}
+
 
 /* Footer Styles */
 .footer {
