@@ -1,4 +1,4 @@
-# stabletts_ccfm
+# StableTTS_ConsistFM (ICASSP25 workshop)
 Repo for stableTTS consistency flow matching
 
 - [x] Demostration Page 
