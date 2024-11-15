@@ -1,5 +1,5 @@
-# StableTTS_ConsistFM (ICASSP25 workshop)
-Repo for stableTTS consistency flow matching
+# StableTTS_ConsistFM
+Repo for StableTTS V2 with consistency flow matching (ICASSP25 workshop)
 
 - [x] Demostration Page 
 - [ ] StableTTS-ConsistFM Code for ICASSP paper experiments
