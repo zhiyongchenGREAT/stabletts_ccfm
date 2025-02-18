@@ -39,17 +39,18 @@ We provide checkpoints for both first stage and second stage training of StableT
 - Vocoder parameters.
 
 Access all weights and baseline weights here:  
-https://huggingface.co/zhiyongchen/StableTTS_consistfm/tree/main
+[![Hugging Face](https://img.shields.io/badge/Hugging_Face-000000?style=flat&logo=HuggingFace&logoColor)](https://huggingface.co/zhiyongchen/StableTTS_consistfm/tree/main)
 
-The vocoder weight here:  
-https://huggingface.co/zhiyongchen/StableTTS_consistfm/tree/main
+The vocoder weight is available here:  
+[![Hugging Face](https://img.shields.io/badge/Hugging_Face-000000?style=flat&logo=HuggingFace&logoColor)](https://huggingface.co/zhiyongchen/StableTTS_consistfm/tree/main)
+
 
 For inference, please refer to:  
 ```
 inference_stableTTS.ipynb
 ```
 
-## Reference
+## Reference and Citations
 
 For any inquiries or further information, please contact:
 
